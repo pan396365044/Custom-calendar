@@ -1,0 +1,164 @@
+.demo-box {
+    /* width: 38%; */
+    overflow: hidden;
+    background: #eef5fd;
+    /* border: 1px solid #e6e8eb; */
+    position: relative;
+    padding-bottom:15px;
+    margin-left:15px;
+}
+
+.calendar-box * {
+    box-sizing: border-box
+}
+
+.ht-rili-head {
+    overflow: hidden
+}
+
+.ht-rili-querybox {
+    height:40px;
+    overflow: hidden
+}
+
+.ht-rili-title {
+    padding: 10px;
+    display: inline-block;
+    max-width: 200px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    vertical-align: middle
+}
+.ht-rili-tipbox{
+    position: absolute;
+    right:2%;
+    top:4%;
+    font-size:12px;
+}
+.ht-rili-tipbox span{
+    width:14px;
+    height:9px;
+    margin:0px 2px;
+    display: inline-block;
+}
+
+.ht-rili-tipbox span:nth-of-type(1) {
+    background:#408f39;
+}
+
+.ht-rili-tipbox span:nth-of-type(2) {
+    background: #fc9f14;
+}
+.ht-rili-datebox {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    display: inline-block;
+    vertical-align: middle;
+    padding: 10px;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.ht-rili-date {
+    text-align: center;
+    display: inline-block;
+    width: 100px;
+    height: 19px;
+    line-height: 19px;
+    vertical-align: middle
+}
+
+.ht-rili-leftarr {
+    display: inline-block;
+    width: 25px;
+    height: 19px;
+    background: url(../img/left-arr.png) left center no-repeat;
+    background-size: contain;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+.ht-rili-rightarr {
+    display: inline-block;
+    width: 25px;
+    height: 19px;
+    background: url(../img/right-arr.png) right center no-repeat;
+    background-size: contain;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+.ht-rili-th {
+    width: 14.25%;
+    float: left;
+    text-align: center;
+    height: 40px;
+    line-height: 40px;
+    color: #000
+}
+
+.ht-rili-td {
+    width: 14.25%;
+    float: left;
+    text-align: center;
+    height: 70px;
+    background: #fff;
+    border-left: 1px solid #e2e2e2;
+    border-bottom: 1px solid #e2e2e2;
+    padding-top: 5px;
+    cursor: pointer
+}
+
+.ht-rili-body {
+    overflow: hidden
+}
+
+.ht-rili-day {
+    font-family: Arial;
+    font-size: 18px;
+    display: inline-block;
+    width: 100%
+}
+
+.ht-rili-day2 {
+    color: #767777;
+}
+
+.ht-rili-money {
+    font-family: Arial;
+    display: inline-block;
+    font-size: 12px;
+    margin: 10px 4px;
+    min-width:30px;
+    max-width:34px;
+    border-radius: 4px;
+    color:#fff;
+}
+.ht-rili-money1 {
+    background: #408f39;
+}
+.ht-rili-money2 {
+    background: #fc9f14;
+}
+@media screen and (min-width:1090px) and (max-width:1540px){
+    .ht-rili-money{
+        margin:1px 4px;
+    }
+}
+.ht-rili-td-disabled {
+    color: #eceff3;
+}
+.ht-rili-td-active {
+    border-radius: 4px;
+    background: #cad9ea;
+    color:#000;
+}
+.ht-rili-td-active .ht-rili-day2{
+    color:#000;
+}

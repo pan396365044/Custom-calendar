@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>自定义日历</title>
+    <!-- <link rel="stylesheet" href="css/bootstrap.min.css"> -->
+    <!-- <link rel="stylesheet" href="css/bootstrap-table.min.css"> -->
+    <link rel="stylesheet" href="css/calendar-pro.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="wraper">
+        <div class="content">
+            <div class="calendar-box demo-box" id="demo"></div>
+        </div>
+    </div>
+    <script src="js/jquery-2.2.3.min.js"></script>
+    <!-- <script src="js/bootstrap.min.js"></script> -->
+    <!-- <script src="js/bootstrap-table.min.js"></script> -->
+    <!-- <script src="js/common2.js"></script> -->
+    <script src="js/calendar.js"></script>
+    <script>
+        var page;
+        $(function() {
+            page.init()
+        });
+        var page = (function() {
+            var monthData = {
+                "status": 200,
+                "text": "",
+                "data": [
+                    { "description": "监控1", "logDate": "2018-08-01", "monitorCount": 123.0, "normal": 113.0, "exception": 10.0 },
+                    { "description": "监控2", "logDate": "2018-08-02", "monitorCount": 113.0, "normal": 112.0, "exception": 1.0 }
+                ]
+            };
+            var calendar = function() {
+                var d = [];
+                for (var i = 0, len = monthData.data.length; i < len; i++) {
+                    var obj = {}
+                    obj.date = monthData.data[i].logDate;
+                    obj.data = monthData.data[i].normal;
+                    obj.data2 = monthData.data[i].exception;
+                    d.push(obj)
+                };
+                console.log(d);
+                $('.calendar-box').calendar({
+                    ele: '#demo', //挂载
+                    title: '自定义日历',
+                    data: d
+                });
+            };
+            return {
+                init: function() {
+                    calendar();
+                }
+            }
+        })();
+    </script>
+</body>
+
+</html>
